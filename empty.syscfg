@@ -1,0 +1,107 @@
+// These arguments were used when this file was generated. They will be automatically applied on subsequent loads 
+// via the GUI or CLI invocations. Run CLI with '--help' for additional information on how to override these arguments.
+// @cliArgs --board "/ti/boards/CC3220S_LAUNCHXL" --product "simplelink_cc32xx_sdk@3.30.01.02"
+// @versions {"data":"2019083011","timestamp":"2019083011","tool":"1.2.952","templates":"2019083011"}
+
+var RTOS = scripting.addModule("/ti/drivers/RTOS");
+var GPIO = scripting.addModule("/ti/drivers/GPIO");
+var Power = scripting.addModule("/ti/drivers/Power");
+var Board = scripting.addModule("/ti/drivers/Board");
+var DriverLib = scripting.addModule("/ti/devices/DriverLib");
+var GPIO1 = GPIO.addInstance();
+var UART = scripting.addModule("/ti/drivers/UART");
+var UART1 = UART.addInstance();
+var UART2 = UART.addInstance();
+var I2C = scripting.addModule("/ti/drivers/I2C");
+var I2C1 = I2C.addInstance();
+var GPIO2 = GPIO.addInstance();
+var GPIO3 = GPIO.addInstance();
+var GPIO4 = GPIO.addInstance();
+var GPIO5 = GPIO.addInstance();
+var GPIO6 = GPIO.addInstance();
+// Name
+Power.parkPins.$name = "ti_drivers_power_PowerCC32XXPins0";
+// Mode - Select the GPIO mode
+GPIO1.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO1.$name = "GPIO_RS";
+// Output Strength - Specifies the output strength
+GPIO1.outputStrength = "High";
+// Assign pin
+GPIO1.gpioPin.$assign = "boosterpack.29"; // P64
+// Name - The C/C++ identifier used in applications as the index parameter passed to UART runtime APIs
+UART1.$name = "UART";
+// Name
+UART1.uart.$name = "MyUART1";
+// Assign pin
+UART1.uart.txPin.$assign = "boosterpack.4"; // P03
+// Assign pin
+UART1.uart.rxPin.$assign = "boosterpack.3"; // P04
+// Name - The C/C++ identifier used in applications as the index parameter passed to UART runtime APIs
+UART2.$name = "UART_LOCAL";
+// Use Hardware - Select the hardware to use, or 'None' to use available header pins
+UART2.$hardware = system.deviceData.board.components.XDS110UART;
+// Name
+UART2.uart.$name = "MyUART1";
+// Name - The C/C++ identifier used in applications as the index parameter passed to I2C runtime APIs
+I2C1.$name = "I2C";
+// Use Hardware - Select the hardware to use, or 'None' to use available header pins
+I2C1.$hardware = system.deviceData.board.components.LP_I2C;
+// Maximum Bit Rate - Maximum bit rate (Kbps) supported by this bus
+I2C1.maxBitRate = 10;
+// Name
+I2C1.i2c.$name = "MyI2C1";
+// Mode - Select the GPIO mode
+GPIO2.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO2.$name = "GPIO_E";
+// Output Strength - Specifies the output strength
+GPIO2.outputStrength = "High";
+// Assign pin
+GPIO2.gpioPin.$assign = "boosterpack.30"; // P50
+// Mode - Select the GPIO mode
+GPIO3.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO3.$name = "GPIO_D4";
+// Output Strength - Specifies the output strength
+GPIO3.outputStrength = "High";
+// Assign pin
+GPIO3.gpioPin.$assign = "boosterpack.19"; // P18
+// Mode - Select the GPIO mode
+GPIO4.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO4.$name = "GPIO_D5";
+// Output Strength - Specifies the output strength
+GPIO4.outputStrength = "High";
+// Assign pin
+GPIO4.gpioPin.$assign = "boosterpack.18"; // P08
+// Mode - Select the GPIO mode
+GPIO5.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO5.$name = "GPIO_D6";
+// Output Strength - Specifies the output strength
+GPIO5.outputStrength = "High";
+// Assign pin
+GPIO5.gpioPin.$assign = "boosterpack.15"; // P07
+// Mode - Select the GPIO mode
+GPIO6.mode = "Output";
+// Name - The C/C++ identifier used in applications as the index parameter passed to GPIO runtime APIs
+GPIO6.$name = "GPIO_D7";
+// Output Strength - Specifies the output strength
+GPIO6.outputStrength = "High";
+// Assign pin
+GPIO6.gpioPin.$assign = "boosterpack.14"; // P06
+// Suggest solution
+UART1.uart.$suggestSolution = "UART0";
+// Suggest solution
+UART2.uart.$suggestSolution = "UART1";
+// Suggest solution
+UART2.uart.txPin.$suggestSolution = "55";
+// Suggest solution
+UART2.uart.rxPin.$suggestSolution = "57";
+// Suggest solution
+I2C1.i2c.$suggestSolution = "I2C0";
+// Suggest solution
+I2C1.i2c.sdaPin.$suggestSolution = "2";
+// Suggest solution
+I2C1.i2c.sclPin.$suggestSolution = "1";
